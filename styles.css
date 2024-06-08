@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'Fuente1';
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    /* Agrega más formatos según sea necesario, como .ttf, .otf, etc. */
+}
+@font-face {
+    font-family: 'Fuente2';
+    src: url('../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    /* Agrega más formatos según sea necesario, como .ttf, .otf, etc. */
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.hide{
+    display: none !important;
+}
+nav{
+    background-color: rgb(17 24 39);
+    font-family: 'Fuente1', sans-serif;
+    color: white;
+}
+.navbar-brand{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.navbar-brand img{
+    height: 48px;
+    width: 100%;
+    margin: 0 10px;
+}
+main{
+    margin: 150px 80px 80px;
+}
+
+.tabla_buscador{
+    min-height: 70px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(31 41 55);
+}
+.busqueda_filtro{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 41px;
+    max-height: 41px;
+}
+.busqueda{
+    position: relative;
+    height: 100%;
+}
+.busqueda_icon{
+    position: absolute;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.busqueda input{
+    height: 100%;
+    padding: 8px 8px 10px 40px;
+    background-color: rgb(55 65 81);
+    border: 1px rgb(75 85 99) solid;
+    border-radius: 8px;
+}
+.busqueda input::placeholder{
+    color: rgb(156 163 175);
+}
+.filter{
+    height: 100%;
+}
+.btn-custom{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px rgb(75 85 99) solid;
+    height: 100%;
+    width: 112px;
+    border-radius: 8px;
+    color: rgb(156 163 175);
+}
+.filtro_categoria{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.filtro_categoria ul{
+    list-style-type: none;
+}
+.dropdown-menu{
+    padding-left: 10px;
+    color: white;
+    background-color: rgb(55 65 81);
+}
+
+.dropdown-menu a{
+    padding: 10px;
+    width: 100%;
+    margin: 4px 0 4px;
+    height: 44px;
+    cursor: pointer;
+    display: flex;
+}
+.dropdown-menu a:hover{
+    background-color: rgb(75 85 99);
+}
+.acciones_division{
+    border-top: 1px solid rgb(75 85 99);
+    display: flex;
+}
+
+.dropdown-menu.show{
+    padding: 0;
+}
+
+.agregar_acciones{
+    justify-content: end;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+/* .agregar_alumno{
+    white-space: nowrap;
+} */
+.agregar_alumno button{
+    display: flex;
+    white-space: nowrap;
+    gap: 10px;
+    width: 160px;
+    padding: 0 5px 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 41px;
+    max-height: 41px;
+}
+.acciones button{
+    height: 41px;
+    max-height: 41px;
+}
+.agregar_alumno_datos{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.agregar_alumno_datos form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#agregar_alumno{
+    max-width: 200px;
+}
+.form-row{
+    max-width: 100%;
+    display: flex;
+}
+.col-md-4{
+    flex: 0 0 25%;
+    max-width: 25%;
+    height: fit-content;
+    white-space: nowrap;
+    min-width: 150px;
+}
+.table{
+    background-color: rgb(31 41 55);
+    white-space: nowrap;
+}
+.bg-warning{
+    background-color: rgb(75 85 99) !important;
+}
+.tabla_alumnos{
+    overflow-x: auto;
+}
+thead tr th{
+    padding: 12px 8px 12px !important;
+}
+tbody tr th,td{
+    padding: 10px 10px 7px !important;
+}
+.row_edit span a{
+    padding-top: 0;
+}
+.row_edit{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 7px 10px !important;
+}
+
+.btn-link{
+    padding: 0px 6px 6px !important;
+}
+.btn_delete_contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.btn_delete svg{
+    cursor: pointer;
+}
+#Grupos header{
+    border-bottom: 5px solid rgb(17 24 39);
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.crearGrupo{
+    font-size: 18px;
+    margin-top: 20px;
+}
+#letras{
+    width: 50px;
+    padding-left: 5px;
+}
+.crearGrupo_agregar{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.selector_letraGrupo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.selector_letraGrupo label{
+    margin: 0;
+}
+.btnGrupo{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 16px;
+    max-height: 40px;
+}
+.btnGrupo_icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grupos{
+    display: flex;
+    flex-direction: column;
+}
+.grupos_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    column-gap: 30px;
+    row-gap: 30px;
+    position: relative;
+    width: 100%;
+}
+.grupo_contenedor{
+    background-color: rgb(47, 58, 83);
+    width: 260px;
+    height: 300px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.grupo_letra{
+    position: relative;
+}
+.letra{
+    opacity: 1;
+}
+.flecha{
+    opacity: 0;
+    padding: 10px 30px 40px 30px;
+}
+.flecha img{
+    height: 100%;
+    width: 100%;
+}
+.letra, .flecha {
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.grupo_contenedor:hover .flecha {
+    opacity: 1;
+}
+
+.grupo_contenedor:hover .letra {
+    opacity: 0;
+}
+.grupo_contenedor:hover{
+    transform: scale(1.05);
+}
+.grupo_letra{
+    font-size: 150px;
+    font-weight: 700;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grupo_cantidadAlumnos{
+    padding: 10px 20px;
+}
+.grupo_informacion{
+    margin-left: 100px;
+}
+.alumnosSinGrupo {
+    margin-top: 20px;
+}
+.alumnosSinGrupo h4{
+    padding-bottom: 5px;
+}
+.alumnosSinGrupo_lista {
+    list-style-type: none;
+}
+.alumnosSinGrupo_lista li{
+    display: flex;
+    font-size: 18px;
+    height: 35px;
+    border-bottom: 1px solid;
+}
+.listaGrupo_input{
+    height: 100%;
+    background-color: rgb(160, 178, 192);
+    width: 35px;
+    padding: 4px;
+    border-right: 1px solid;
+}
+.listaGrupo_input input{
+    height: 100%;
+    width: 100%;
+}
+.alumnosSinGrupo_lista label{
+    border-left: 1px solid;
+    margin: 0;
+    padding: 3px 10px 0;
+    background-color: rgb(74, 91, 104);
+    color: white;
+    height: 100%;
+}
